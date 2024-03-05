@@ -1,0 +1,98 @@
+---
+import SocialMediaBar from '../SocialMediaBar.astro'
+
+const { data } = Astro.props
+---
+
+<nav
+	id="main-nav-menu"
+	class="fixed right-0 top-0 flex min-h-dvh w-full max-w-[26.25rem] translate-x-[100%] flex-col justify-between bg-black p-8 transition duration-300"
+>
+	<div class="flex items-center justify-between pb-8">
+		<a href="/" class="w-[11.25rem]">
+			<img src="/images/monstercat-logo-white.svg" alt="Monstercat logo white" />
+		</a>
+		<button type="button" class="w-8" id="btn-close-menu">
+			<svg xmlns="http://www.w3.org/2000/svg" width="128" viewBox="0 0 24 24" class="w-full"
+				><path
+					fill="currentColor"
+					d="m12 13.4l-4.9 4.9q-.275.275-.7.275t-.7-.275q-.275-.275-.275-.7t.275-.7l4.9-4.9l-4.9-4.9q-.275-.275-.275-.7t.275-.7q.275-.275.7-.275t.7.275l4.9 4.9l4.9-4.9q.275-.275.7-.275t.7.275q.275.275.275.7t-.275.7L13.4 12l4.9 4.9q.275.275.275.7t-.275.7q-.275.275-.7.275t-.7-.275z"
+				></path></svg
+			>
+		</button>
+	</div>
+
+	<div class="flex flex-grow basis-0 overflow-y-scroll">
+		<ul class="flex flex-col gap-6" id="main-menu">
+			{
+				data.map((item) => (
+					<li class="title text-lg">
+						<a href={item.to} class="flex items-center gap-x-2">
+							{item.title}
+							{item.sub_menu && (
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="24"
+									viewBox="0 0 24 24"
+									stroke-width="1.5"
+									stroke="currentColor"
+									fill="none"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									class="w-4"
+								>
+									<>
+										<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+										<path d="M9 6l6 6l-6 6" />
+									</>
+								</svg>
+							)}
+						</a>
+						{item.sub_menu && (
+							<ul class="hidden flex-col gap-4 pl-4 pt-4 ">
+								{item.sub_menu.map((subItem) => (
+									<li class="text-base text-[#C4C4C4]">
+										<a href={subItem.to}>{subItem.title}</a>
+									</li>
+								))}
+							</ul>
+						)}
+					</li>
+				))
+			}
+		</ul>
+	</div>
+
+	<div class="pt-8">
+		<SocialMediaBar />
+		<div class="title mt-8 flex items-center gap-x-2 text-base">
+			<a href="#" class="border px-4 py-2">Sign In</a>
+			<span>or</span>
+			<a href="#">Sign Up</a>
+		</div>
+	</div>
+</nav>
+
+<script>
+	const mainMenu = document.querySelector('#main-menu') as HTMLUListElement
+
+	const t = Array.from(mainMenu.children).filter((item) => item.children)
+
+	t.map((item) => {
+		const elmn = item.children[0]
+
+		elmn.addEventListener('click', (ev) => {
+			if (elmn.nextElementSibling) {
+				ev.preventDefault()
+				elmn.children[0].classList.toggle('-rotate-90')
+				elmn.nextElementSibling.classList.toggle('hidden')
+				elmn.nextElementSibling.classList.toggle('flex')
+			}
+		})
+	})
+
+	const btnCloseMenu = document.querySelector('#btn-close-menu')
+	btnCloseMenu.addEventListener('click', () => {
+		document.querySelector('#main-nav-menu').classList.add('translate-x-[100%]')
+	})
+</script>

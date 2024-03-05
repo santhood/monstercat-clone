@@ -1,0 +1,53 @@
+---
+import LinkButton from './LinkButton.astro'
+
+const articles_data = [
+	{
+		to: '#',
+		title: 'Unlock Gold Features',
+		image: '/images/gold-img.webp',
+		alt: 'Gold image',
+		text: `
+    Monstercat Gold is an individual music licensing subscription 
+    that gives members access to thousands of high-quality songs 
+    to use in their creative content.
+    `
+	},
+	{
+		to: '#',
+		title: 'Sync & Partnerships',
+		image: '/images/sync-img.webp',
+		alt: 'Sync image',
+		text: `
+    Discover the unique partnerships and diverse audiences that 
+    have embraced the Monstercat brand.
+    `
+	}
+]
+---
+
+<section class="wrapper-content mt-12">
+	<div>
+		<h2 class="title text-xl md:text-2xl">Use Our Music</h2>
+		<hr class="mt-4 opacity-30" />
+	</div>
+	<div class="mt-8 flex flex-col gap-12 md:flex-row">
+		{
+			articles_data.map((article) => {
+				return (
+					<article class="flex flex-col">
+						<h3 class="title text-xl">{article.title}</h3>
+						<picture class="mt-8 block">
+							<img src={article.image} alt={article.alt} />
+						</picture>
+						<p class="my-4 flex flex-grow basis-0 italic sm:my-5 sm:text-base md:mb-10 md:text-lg md:leading-[1.8]">
+							{article.text}
+						</p>
+						<LinkButton to="#" text="Learn More" />
+					</article>
+				)
+			})
+		}
+	</div>
+	<hr class="mt-12 opacity-30" />
+</section>

@@ -1,0 +1,22 @@
+---
+const { to, text } = Astro.props
+---
+
+<a
+	href={to}
+	class="flex w-max items-center gap-x-1 border px-5 py-2 font-heading text-xs font-bold uppercase tracking-[0.0375rem] md:text-sm"
+>
+	<span>{text}</span>
+	<svg
+		xmlns="http://www.w3.org/2000/svg"
+		width="24"
+		viewBox="0 0 24 24"
+		stroke-width="1.5"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+		stroke-linejoin="round"
+		class="w-4"
+		><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M9 6l6 6l-6 6"></path></svg
+	></a
+>

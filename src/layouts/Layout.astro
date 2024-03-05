@@ -1,0 +1,74 @@
+---
+import '@fontsource-variable/syne'
+import '@fontsource-variable/montserrat'
+import Notice from '../components/Notice.astro'
+import Header from '../components/Header/Header.astro'
+import Footer from '../components/Footer.astro'
+
+interface Props {
+	title: string
+}
+const { title } = Astro.props
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Clone del sitio web https://www.monstercat.com/" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<Notice />
+	</body>
+	<Header />
+	<slot />
+	<Footer />
+</html>
+
+<style is:global>
+	@tailwind base;
+	@tailwind components;
+	@tailwind utilities;
+
+	@layer base {
+		:root {
+			--ff-body: 'Montserrat Variable', sans-serif;
+			--ff-heading: 'Syne Variable', sans-serif;
+		}
+		body {
+			@apply bg-[url('/images/noise.webp')] font-body text-sm leading-[1.75] text-[#F1F1F1];
+		}
+		::-webkit-scrollbar {
+			width: 10px;
+		}
+
+		::-webkit-scrollbar-track {
+			background-color: #000000;
+			/* -webkit-border-radius: 10px;
+      border-radius: 10px; */
+		}
+
+		::-webkit-scrollbar-thumb {
+			-webkit-border-radius: 10px;
+			border-radius: 10px;
+			background: #6d6d6d;
+		}
+	}
+	@layer utilities {
+		.title {
+			@apply font-heading font-bold uppercase leading-none;
+		}
+		.wrapper-content {
+			@apply mx-auto max-w-[33.25rem] px-4 md:max-w-full lg:max-w-[62rem] min-[1440px]:max-w-[73.625rem];
+		}
+		.text-shadow {
+			-webkit-text-stroke-width: 1px;
+			-webkit-text-stroke-color: #f1f1f1;
+			-webkit-text-fill-color: transparent;
+		}
+	}
+</style>

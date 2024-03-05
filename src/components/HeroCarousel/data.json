@@ -1,0 +1,47 @@
+[
+  {
+    "index_id": "0",
+    "title": "SEE YOU DROP",
+    "subtitle": "Ray Volpe",
+    "primary_color": "#9a8ff6",
+    "info": {
+      "text_color": "Uncaged",
+      "text_default": "- Released March 1, 2024"
+    },
+    "links": {
+      "_1": "#",
+      "_2": "#"
+    },
+    "image": "/images/banner/image-1.webp"
+  },
+  {
+    "index_id": "1",
+    "title": "Ghost",
+    "subtitle": "Direct",
+    "primary_color": "#50A584",
+    "info": {
+      "text_color": "Instinct",
+      "text_default": "- Released February 27, 2024"
+    },
+    "links": {
+      "_1": "#",
+      "_2": "#"
+    },
+    "image": "/images/banner/image-2.webp"
+  },
+  {
+    "index_id": "2",
+    "title": "Karma",
+    "subtitle": "A.M.R & Cornelius SA",
+    "primary_color": "#F68E2F",
+    "info": {
+      "text_color": "Silk",
+      "text_default": "- Released February 27, 2024"
+    },
+    "links": {
+      "_1": "#",
+      "_2": "#"
+    },
+    "image": "/images/banner/image-3.webp"
+  }
+]

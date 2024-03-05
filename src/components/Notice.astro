@@ -1,0 +1,32 @@
+<div
+	id="notice"
+	class="fixed inset-x-0 top-0 z-[60] grid grid-cols-[1fr_auto] items-center bg-red-300 px-2 py-4 text-center text-slate-900"
+>
+	<p>
+		<span class="font-bold">¡Esta no es la página oficial!</span> Esta página ha sido realizada sólo
+		para fines educativos. La página oficial es: <a
+			href="https://www.monstercat.com/"
+			class="font-bold underline"
+			target="_blank">https://www.monstercat.com/</a
+		>
+	</p>
+	<button type="button" class="w-8" id="close-notice">
+		<svg xmlns="http://www.w3.org/2000/svg" width="128" viewBox="0 0 24 24" class="w-full"
+			><path
+				fill="currentColor"
+				d="m12 13.4l-4.9 4.9q-.275.275-.7.275t-.7-.275q-.275-.275-.275-.7t.275-.7l4.9-4.9l-4.9-4.9q-.275-.275-.275-.7t.275-.7q.275-.275.7-.275t.7.275l4.9 4.9l4.9-4.9q.275-.275.7-.275t.7.275q.275.275.275.7t-.275.7L13.4 12l4.9 4.9q.275.275.275.7t-.275.7q-.275.275-.7.275t-.7-.275z"
+			></path></svg
+		>
+	</button>
+</div>
+
+<script>
+	const notice = document.querySelector('#notice')
+	const btnClose = document.querySelector('#close-notice')
+
+	if (notice && btnClose) {
+		btnClose.addEventListener('click', () => {
+			notice.remove()
+		})
+	}
+</script>

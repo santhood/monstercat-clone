@@ -1,0 +1,40 @@
+---
+import SocialMediaBar from '../SocialMediaBar.astro'
+import HeaderMenu from './HeaderMenu.astro'
+import data from './data.json'
+---
+
+<header
+	class="fixed inset-x-0 left-0 top-0 z-50 bg-black/70 px-4 py-2 backdrop-blur-md xl:bg-transparent xl:backdrop-blur-none"
+>
+	<div class="relative mx-auto max-w-[73.625rem] min-[1440px]:max-w-[86rem]">
+		<div class="flex items-center justify-between">
+			<a href="/"
+				><img src="/images/logo.webp" alt="Monstercat logo" class="w-9 sm:w-[3.125rem]" /></a
+			>
+			<SocialMediaBar
+				className="hidden sm:flex sm:gap-6 xl:absolute xl:bottom-0 xl:right-0 xl:translate-y-full xl:flex-col xl:pt-14"
+			/>
+			<button type="button" id="btn-open-menu">
+				<svg xmlns="http://www.w3.org/2000/svg" width="128" viewBox="0 0 24 24" class="w-7"
+					><path
+						fill="none"
+						stroke="currentColor"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="2"
+						d="M4 6h16M4 12h16M4 18h16"></path></svg
+				>
+			</button>
+		</div>
+
+		<HeaderMenu data={data} />
+	</div>
+</header>
+
+<script>
+	const btnOpenMenu = document.querySelector('#btn-open-menu')
+	btnOpenMenu.addEventListener('click', () => {
+		document.querySelector('#main-nav-menu').classList.remove('translate-x-[100%]')
+	})
+</script>

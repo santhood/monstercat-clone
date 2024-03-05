@@ -1,0 +1,35 @@
+---
+import Instagram from '../components/icons/Instagram.astro'
+import TikTok from '../components/icons/TikTok.astro'
+import Twitter from '../components/icons/Twitter.astro'
+import Twitch from '../components/icons/Twitch.astro'
+import Facebook from '../components/icons/Facebook.astro'
+import Discord from '../components/icons/Discord.astro'
+import MonstercatPlayer from '../components/icons/MonstercatPlayer.astro'
+
+const { className } = Astro.props
+---
+
+<div class={`flex items-center gap-x-4 [&>a>svg]:w-5 ${className}`}>
+	<a href="#">
+		<Instagram />
+	</a>
+	<a href="#">
+		<TikTok />
+	</a>
+	<a href="#">
+		<Twitter />
+	</a>
+	<a href="#">
+		<Twitch />
+	</a>
+	<a href="#">
+		<Facebook />
+	</a>
+	<a href="#">
+		<Discord />
+	</a>
+	<a href="#">
+		<MonstercatPlayer />
+	</a>
+</div>

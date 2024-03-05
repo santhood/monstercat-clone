@@ -1,0 +1,118 @@
+[
+  {
+    "to": "#",
+    "title": "Music",
+    "sub_menu": [
+      {
+        "to": "#",
+        "title": "Our Music"
+      },
+      {
+        "to": "#",
+        "title": "Instinct"
+      },
+      {
+        "to": "#",
+        "title": "Uncaged"
+      },
+      {
+        "to": "#",
+        "title": "Silk"
+      }
+    ]
+  },
+  {
+    "to": "#",
+    "title": "Artists"
+  },
+  {
+    "to": "#",
+    "title": "About",
+    "sub_menu": [
+      {
+        "to": "#",
+        "title": "About Monstercat"
+      },
+      {
+        "to": "#",
+        "title": "Diversity & Inclusion"
+      },
+      {
+        "to": "#",
+        "title": "Code of Ethics"
+      },
+      {
+        "to": "#",
+        "title": "Environmental"
+      },
+      {
+        "to": "#",
+        "title": "Contact Us"
+      }
+    ]
+  },
+  {
+    "to": "#",
+    "title": "News"
+  },
+  {
+    "to": "#",
+    "title": "Events",
+    "sub_menu": [
+      {
+        "to": "#",
+        "title": "Monstercat Events Experience"
+      },
+      {
+        "to": "#",
+        "title": "Upcoming Events"
+      }
+    ]
+  },
+  {
+    "to": "#",
+    "title": "Programming",
+    "sub_menu": [
+      {
+        "to": "#",
+        "title": "MonstercatTV"
+      },
+      {
+        "to": "#",
+        "title": "Call of the Wild"
+      },
+      {
+        "to": "#",
+        "title": "Silk Showcase"
+      },
+      {
+        "to": "#",
+        "title": "Upcoming Shows"
+      }
+    ]
+  },
+  {
+    "to": "#",
+    "title": "Gold"
+  },
+  {
+    "to": "#",
+    "title": "Partners"
+  },
+  {
+    "to": "#",
+    "title": "Press"
+  },
+  {
+    "to": "#",
+    "title": " Player"
+  },
+  {
+    "to": "#",
+    "title": "Shop"
+  },
+  {
+    "to": "#",
+    "title": "Lost Civilization"
+  }
+]

@@ -1,0 +1,33 @@
+---
+import Layout from '../layouts/Layout.astro'
+import HeroCarousel from '../components/HeroCarousel/HeroCarousel'
+import Brands from '../components/Brands.astro'
+import ThreeCarousel from '../components/ThreeCarousel/ThreeCarousel'
+import Playlists from '../components/Playlists.astro'
+import Articles from '../components/Articles.astro'
+import Involved from '../components/Involved.astro'
+import LinkButton from '../components/LinkButton.astro'
+---
+
+<Layout title="Monstercat">
+	<main>
+		<HeroCarousel client:load />
+		<section class="wrapper-content py-2">
+			<div class="md:flex md:flex-col md:items-center md:text-center">
+				<h2 class="title text-xl md:text-2xl lg:text-3xl">
+					Leading the movement towards artist sustainability
+				</h2>
+				<p class="mb-8 mt-4 text-balance italic sm:text-base md:text-lg">
+					At Monstercat, we strive to create artist sustainability through novel partnerships,
+					career flexibility and a global commuinity
+				</p>
+				<LinkButton to="#" text="Learn More" />
+			</div>
+		</section>
+		<Brands />
+		<ThreeCarousel client:load />
+		<Playlists />
+		<Articles />
+		<Involved />
+	</main>
+</Layout>

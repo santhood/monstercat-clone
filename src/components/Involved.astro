@@ -1,0 +1,83 @@
+---
+const involved_data = [
+	{
+		to: '#',
+		title: 'Events',
+		description:
+			'Find out where you can experience Monstercat artists performing live around the world',
+		image: '/images/involved/list-bg-events.webp'
+	},
+	{
+		to: '#',
+		title: 'MonstercatTV',
+		description:
+			'Tune in to our weekly Twitch broadcast for livestreamed sets, artist residencies, original content and more',
+		image: '/images/involved/list-bg-mctv.webp'
+	},
+	{
+		to: '#',
+		title: 'Shop',
+		description:
+			'Cop the latest looks from our apparel collections and dig through our vinyl offerings',
+		image: '/images/involved/list-bg-apparel.webp'
+	},
+	{
+		to: '#',
+		title: 'Call of the Wild',
+		description:
+			'Dive into an unbound exploration of sound with Monstercat’s weekly radio show & podcast',
+		image: '/images/involved/list-bg-cotw.webp'
+	},
+	{
+		to: '#',
+		title: 'Silk Showcase',
+		description:
+			'Enjoy Monstercat Silk’s weekly radio show & podcast, featuring the best in progressive house, trance, and more',
+		image: '/images/involved/list-bg-silk.webp'
+	},
+	{
+		to: '#',
+		title: 'Press',
+		description: 'Catch up on breaking news, interviews, and Monstercat announcements in the media',
+		image: '/images/involved/list-bg-press-release.webp'
+	}
+]
+---
+
+<section class="wrapper-content mt-12">
+	<h2 class="title text-xl md:text-2xl">Get Involved</h2>
+	<div class="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2">
+		{
+			involved_data.map((involved) => {
+				return (
+					<a
+						href={involved.to}
+						class="grid h-44 grid-cols-[1fr_auto] items-center bg-cover bg-center p-4 pr-8 md:p-8 md:pr-10"
+						style={`background-image: linear-gradient(96deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.7287289915966386) 56%, rgba(0, 0, 0, 0) 100%),url('${involved.image}')`}
+					>
+						<div>
+							<h3 class="title text-xl">{involved.title}</h3>
+							<p class="mt-4 line-clamp-3 font-semibold italic">{involved.description}</p>
+						</div>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="24"
+							viewBox="0 0 24 24"
+							stroke-width="1.5"
+							stroke="currentColor"
+							fill="none"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							class="w-8"
+						>
+							<>
+								<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+								<path d="M9 6l6 6l-6 6" />
+							</>
+						</svg>
+					</a>
+				)
+			})
+		}
+	</div>
+</section>

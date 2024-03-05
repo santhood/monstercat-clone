@@ -1,0 +1,85 @@
+[
+  {
+    "title": "Latest Releases",
+    "full_image": false,
+    "slides": [
+      {
+        "to": "#",
+        "title": "Not My Night",
+        "image": "/images/releases/image-1.webp"
+      },
+      {
+        "to": "#",
+        "title": "Rawthentic",
+        "image": "/images/releases/image-2.webp"
+      },
+      {
+        "to": "#",
+        "title": "Rain Dance",
+        "image": "/images/releases/image-3.webp"
+      },
+      {
+        "to": "#",
+        "title": "Don't Wanna Know",
+        "image": "/images/releases/image-4.webp"
+      },
+      {
+        "to": "#",
+        "title": "BINARY BLOOD",
+        "image": "/images/releases/image-5.webp"
+      }
+    ]
+  },
+  {
+    "title": "Our Artists",
+    "full_image": true,
+    "slides": [
+      {
+        "to": "#",
+        "title": "Ray Volpe",
+        "image": "/images/artists/image-1.webp"
+      },
+      {
+        "to": "#",
+        "title": "Direct",
+        "image": "/images/artists/image-2.webp"
+      },
+      {
+        "to": "#",
+        "title": "Point North",
+        "image": "/images/artists/image-3.webp"
+      },
+      {
+        "to": "#",
+        "title": "Fairlane",
+        "image": "/images/artists/image-4.webp"
+      },
+      {
+        "to": "#",
+        "title": "A.M.R",
+        "image": "/images/artists/image-5.webp"
+      }
+    ]
+  },
+  {
+    "title": "Featured News",
+    "full_image": true,
+    "slides": [
+      {
+        "to": "#",
+        "title": "Monstercat Insider: New features for Monstercat Gold",
+        "image": "/images/news/image-1.webp"
+      },
+      {
+        "to": "#",
+        "title": "Monstercat Gold & Content Creator Licenses",
+        "image": "/images/news/image-2.webp"
+      },
+      {
+        "to": "#",
+        "title": "The Background of Bishu & 'BXU'",
+        "image": "/images/news/image-3.webp"
+      }
+    ]
+  }
+]
