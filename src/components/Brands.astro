@@ -1,22 +1,22 @@
 ---
 const brands_data = [
 	{
-		poster: '/images/brands/loop-uncaged-bg.webp',
-		video: '/images/brands/loop-uncaged.webm',
+		poster: '/images/brands/loop-uncaged-bg.jpg',
+		video: '/images/brands/loop-uncaged.mp4',
 		logo: '/images/brands/logo-uncaged.webp',
 		to: '#',
 		alt: 'uncaged'
 	},
 	{
-		poster: '/images/brands/loop-instinct-bg.webp',
-		video: '/images/brands/loop-instinct.webm',
+		poster: '/images/brands/loop-instinct-bg.jpg',
+		video: '/images/brands/loop-instinct.mp4',
 		logo: '/images/brands/logo-instinct.webp',
 		to: '#',
 		alt: 'instinct'
 	},
 	{
-		poster: '/images/brands/loop-silk-bg.webp',
-		video: '/images/brands/loop-silk.webm',
+		poster: '/images/brands/loop-silk-bg.jpg',
+		video: '/images/brands/loop-silk.mp4',
 		logo: '/images/brands/logo-silk.webp',
 		to: '#',
 		alt: 'silk'
@@ -24,23 +24,23 @@ const brands_data = [
 ]
 ---
 
-<section class="wrapper-content mt-20">
+<section class='wrapper-content mt-20'>
 	<div>
-		<h2 class="title text-xl">Our Brands</h2>
+		<h2 class='title text-xl'>Our Brands</h2>
 
-		<div class="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3">
+		<div class='mt-8 grid grid-cols-1 gap-4 md:grid-cols-3'>
 			{
 				brands_data.map((brand) => {
 					return (
 						<a
 							href={brand.to}
-							class=" relative flex aspect-video items-center justify-center bg-cover bg-no-repeat hover:[&>video]:opacity-100"
+							class=' relative flex aspect-video items-center justify-center bg-cover bg-no-repeat hover:[&>video]:opacity-100'
 							style={`background-image: url('${brand.poster}')`}
 						>
 							<img
 								src={brand.logo}
 								alt={`Logo ${brand.alt}`}
-								class="pointer-events-none relative z-10 w-48"
+								class='pointer-events-none relative z-10 w-48'
 							/>
 							<video
 								src={brand.video}
@@ -48,7 +48,7 @@ const brands_data = [
 								autoplay
 								muted
 								loop
-								class="absolute z-0 h-full w-full object-cover opacity-0 transition duration-500 ease-in-out"
+								class='absolute z-0 h-full w-full object-cover opacity-0 transition duration-500 ease-in-out'
 							/>
 						</a>
 					)

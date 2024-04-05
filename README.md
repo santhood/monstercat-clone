@@ -1,4 +1,4 @@
-![Monstercat Clone](public/screenshot.png)
+![Monstercat Clone](public/screenshot.jpg)
 
 # Clon de la Página Web de Monstercat
 
